@@ -2,7 +2,7 @@
 
 **English** | [Tiếng Việt](README.md)
 
-A modern 2-line network speed monitor widget for KDE Plasma 6 powered by native `org.kde.ksysguard.sensors` (no external tools or dependencies required).
+A modern **2-line** (default) or **1-line** network speed monitor widget for KDE Plasma 6 powered by native `org.kde.ksysguard.sensors` (no external tools or dependencies required).
 
 ## Screenshots
 
@@ -14,13 +14,13 @@ A modern 2-line network speed monitor widget for KDE Plasma 6 powered by native 
 
 ## Features
 
-- **Two-Line Monitor:**
-  - Top line displays the upload icon (`go-up`) + upload speed; bottom line displays the download icon (`go-down`) + download speed.
+- **Two-Line / One-Line Monitor:**
+  - Defaults to a **2-line (stacked)** layout (top: upload icon `go-up` + upload speed; bottom: download icon `go-down` + download speed), with an option to switch to a **1-line (inline)** layout on horizontal panels.
   - Compatible with horizontal & vertical Panels as well as the Desktop, with a click popup showing current speeds, peak speeds, and a reset button.
 - **Independent Line Styling:**
   - Separate font family and font size (`6–72 pt`) for Upload and Download lines.
   - Independent Bold / Italic toggles and custom colors (or automatic system theme color).
-  - Adjustable spacing between the two lines (`0–20 px`) with a Live Preview in settings.
+  - Switchable **2-line / 1-line** layout and adjustable spacing (`0–20 px`) with a Live Preview in settings.
 - **Configurable Units & Polling:**
   - Speed units: Decimal (`B/s`, `KB/s`, `MB/s`...), Binary (`B/s`, `KiB/s`, `MiB/s`...), or Bits (`b/s`, `Kb/s`, `Mb/s`...).
   - Flexible refresh interval from `500 ms` to `10000 ms`.

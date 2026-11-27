@@ -2,7 +2,7 @@
 
 [English](README_en.md) | **Tiếng Việt**
 
-Widget hiển thị tốc độ mạng hiện đại theo 2 dòng cho KDE Plasma 6 (sử dụng cảm biến native `org.kde.ksysguard.sensors`, không cần cài thêm phần mềm phụ trợ).
+Widget hiển thị tốc độ mạng hiện đại hỗ trợ bố cục **2 dòng** (mặc định) hoặc **1 dòng** cho KDE Plasma 6 (sử dụng cảm biến native `org.kde.ksysguard.sensors`, không cần cài thêm phần mềm phụ trợ).
 
 ## Ảnh chụp màn hình / Screenshots
 
@@ -14,13 +14,13 @@ Widget hiển thị tốc độ mạng hiện đại theo 2 dòng cho KDE Plasma
 
 ## Tính năng chính / Features
 
-- **Hiển thị 2 dòng gọn gàng (Two-Line Monitor):**
-  - Dòng trên hiển thị biểu tượng tải lên (`go-up`) + tốc độ upload; dòng dưới hiển thị biểu tượng tải xuống (`go-down`) + tốc độ download.
+- **Hiển thị 2 dòng / 1 dòng gọn gàng (Two-Line / One-Line Monitor):**
+  - Mặc định hiển thị **2 dòng trên dưới** (trên: biểu tượng tải lên `go-up` + tốc độ upload; dưới: biểu tượng tải xuống `go-down` + tốc độ download), hỗ trợ chuyển sang kiểu **1 dòng ngang** trong phần cài đặt.
   - Tương thích thanh Panel (ngang & dọc) và Desktop, kèm popup xem tốc độ hiện tại, tốc độ đỉnh (Peak) và nút đặt lại khi nhấp vào.
 - **Tùy chỉnh giao diện từng dòng độc lập (Independent Line Styling):**
   - Kiểu chữ (Font family) và cỡ chữ (`6–72 pt`) riêng cho dòng Upload và Download.
   - Định dạng In đậm / In nghiêng và chọn màu sắc tùy ý (hoặc dùng màu chủ đề hệ thống).
-  - Tùy chỉnh khoảng cách giữa 2 dòng (`0–20 px`) kèm khung xem trước trực tiếp (Live Preview).
+  - Tùy chọn kiểu hiển thị (**2 dòng** hoặc **1 dòng**) và khoảng cách (`0–20 px`) kèm khung xem trước trực tiếp (Live Preview).
 - **Tùy chỉnh đơn vị & tần suất cập nhật (Configurable Units & Polling):**
   - Đơn vị tốc độ: Hệ thập phân (`B/s`, `KB/s`, `MB/s`...), Hệ nhị phân (`B/s`, `KiB/s`, `MiB/s`...) hoặc Bit (`b/s`, `Kb/s`, `Mb/s`...).
   - Chu kỳ làm mới linh hoạt từ `500 ms` đến `10000 ms`.

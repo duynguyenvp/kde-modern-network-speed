@@ -14,7 +14,7 @@
         "License": "GPL-3.0-or-later",
         "Name": "Modern Network Speed",
         "Name[vi]": "Tốc độ mạng hiện đại",
-        "Version": "1.0.0",
+        "Version": "1.1.0",
         "Website": "https://github.com/duynguyenvp/kde-modern-network-speed"
     },
     "X-Plasma-API-Minimum-Version": "6.0"

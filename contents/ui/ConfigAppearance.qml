@@ -22,7 +22,10 @@ KCM.SimpleKCM {
     property alias cfg_downloadFontItalic: downloadItalicCheck.checked
     property string cfg_downloadColor
 
+    property string cfg_displayLayout: "two_lines"
     property alias cfg_lineSpacing: lineSpacingSpin.value
+
+    readonly property var layoutValues: ["two_lines", "one_line"]
 
     readonly property string lang: Plasmoid.configuration.language
     readonly property var fontList: [""].concat(Qt.fontFamilies())
@@ -46,8 +49,11 @@ KCM.SimpleKCM {
 
         Rectangle {
             Kirigami.FormData.label: ""
-            implicitWidth: Math.max(previewColumn.implicitWidth + 32, 160)
-            implicitHeight: previewColumn.implicitHeight + 20
+            readonly property bool previewOneLine: cfg_displayLayout === "one_line"
+            readonly property real activePreviewWidth: previewOneLine ? previewRow.implicitWidth : previewColumn.implicitWidth
+            readonly property real activePreviewHeight: previewOneLine ? previewRow.implicitHeight : previewColumn.implicitHeight
+            implicitWidth: Math.max(activePreviewWidth + 32, 160)
+            implicitHeight: activePreviewHeight + 20
             radius: Kirigami.Units.smallSpacing
             color: Kirigami.Theme.backgroundColor
             border.color: Kirigami.Theme.disabledTextColor
@@ -57,6 +63,7 @@ KCM.SimpleKCM {
                 id: previewColumn
                 anchors.centerIn: parent
                 spacing: cfg_lineSpacing
+                visible: !parent.previewOneLine
 
                 SpeedLine {
                     iconName: "go-up"
@@ -78,6 +85,43 @@ KCM.SimpleKCM {
                     fontItalic: cfg_downloadFontItalic
                     customColor: cfg_downloadColor
                     Layout.fillWidth: true
+                }
+            }
+
+            RowLayout {
+                id: previewRow
+                anchors.centerIn: parent
+                spacing: Math.max(4, cfg_lineSpacing + 4)
+                visible: parent.previewOneLine
+
+                SpeedLine {
+                    iconName: "go-up"
+                    speedText: "128.4 KB/s"
+                    fontFamily: cfg_uploadFontFamily
+                    fontSize: cfg_uploadFontSize
+                    fontBold: cfg_uploadFontBold
+                    fontItalic: cfg_uploadFontItalic
+                    customColor: cfg_uploadColor
+                    Layout.alignment: Qt.AlignVCenter
+                }
+
+                Rectangle {
+                    Layout.alignment: Qt.AlignVCenter
+                    implicitWidth: 1
+                    implicitHeight: Math.max(10, Math.round(Math.max(cfg_uploadFontSize, cfg_downloadFontSize) * 1.2))
+                    color: Kirigami.Theme.textColor
+                    opacity: 0.35
+                }
+
+                SpeedLine {
+                    iconName: "go-down"
+                    speedText: "4.82 MB/s"
+                    fontFamily: cfg_downloadFontFamily
+                    fontSize: cfg_downloadFontSize
+                    fontBold: cfg_downloadFontBold
+                    fontItalic: cfg_downloadFontItalic
+                    customColor: cfg_downloadColor
+                    Layout.alignment: Qt.AlignVCenter
                 }
             }
         }
@@ -238,6 +282,20 @@ KCM.SimpleKCM {
         Kirigami.Separator {
             Kirigami.FormData.isSection: true
             Kirigami.FormData.label: Tr.t("layoutSection", configPage.lang)
+        }
+
+        QQC2.ComboBox {
+            id: displayLayoutCombo
+            Kirigami.FormData.label: Tr.t("displayLayout", configPage.lang)
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 14
+            model: [
+                Tr.t("layoutTwoLines", configPage.lang),
+                Tr.t("layoutOneLine", configPage.lang)
+            ]
+            currentIndex: Math.max(0, configPage.layoutValues.indexOf(cfg_displayLayout))
+            onActivated: (idx) => {
+                cfg_displayLayout = configPage.layoutValues[idx];
+            }
         }
 
         QQC2.SpinBox {

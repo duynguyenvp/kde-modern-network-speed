@@ -50,6 +50,9 @@
             <default></default>
         </entry>
 
+        <entry name="displayLayout" type="String">
+            <default>two_lines</default>
+        </entry>
         <entry name="lineSpacing" type="Int">
             <default>2</default>
         </entry>
