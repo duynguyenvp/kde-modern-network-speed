@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="language" type="String">
+            <default>system</default>
+        </entry>
+        <entry name="speedUnit" type="String">
+            <default>decimal_bytes</default>
+        </entry>
+        <entry name="updateInterval" type="Int">
+            <default>1000</default>
+        </entry>
+    </group>
+
+    <group name="Appearance">
+        <entry name="uploadFontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="uploadFontSize" type="Int">
+            <default>9</default>
+        </entry>
+        <entry name="uploadFontBold" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="uploadFontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="uploadColor" type="String">
+            <default></default>
+        </entry>
+
+        <entry name="downloadFontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="downloadFontSize" type="Int">
+            <default>9</default>
+        </entry>
+        <entry name="downloadFontBold" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="downloadFontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="downloadColor" type="String">
+            <default></default>
+        </entry>
+
+        <entry name="lineSpacing" type="Int">
+            <default>2</default>
+        </entry>
+    </group>
+</kcfg>

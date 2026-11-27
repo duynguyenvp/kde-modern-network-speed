@@ -1,0 +1,21 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "duynguyenvp"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Modern two-line network upload and download speed monitor with customizable fonts and colors",
+        "Description[vi]": "Widget hiển thị tốc độ tải lên và tải xuống mạng theo 2 dòng với tùy chỉnh phông chữ và màu sắc",
+        "Icon": "network-wired",
+        "Id": "com.modern.networkspeed",
+        "License": "GPL-3.0-or-later",
+        "Name": "Modern Network Speed",
+        "Name[vi]": "Tốc độ mạng hiện đại",
+        "Version": "1.0.0",
+        "Website": "https://github.com/duynguyenvp/kde-modern-network-speed"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
