@@ -1,5 +1,7 @@
 # Modern Network Speed (KDE Plasma 6 Widget)
 
+[English](README_en.md) | **Tiếng Việt**
+
 Widget hiển thị tốc độ mạng hiện đại theo 2 dòng cho KDE Plasma 6 (sử dụng cảm biến native `org.kde.ksysguard.sensors`, không cần cài thêm phần mềm phụ trợ).
 
 ## Ảnh chụp màn hình / Screenshots
